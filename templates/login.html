@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MindBloom - Login</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/auth.css') }}">
+</head>
+<body>
+    <div class="auth-container">
+        <div class="auth-card">
+            <div class="auth-header">
+                <div class="logo">
+                    <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+                        <circle cx="24" cy="24" r="24" fill="#E8F5E8"/>
+                        <g transform="translate(24,24)">
+                            <path d="M0-8 L3-6 L0-4 L-3-6 Z" fill="#4CAF50"/>
+                            <path d="M8 0 L6 3 L4 0 L6-3 Z" fill="#4CAF50"/>
+                            <path d="M0 8 L-3 6 L0 4 L3 6 Z" fill="#4CAF50"/>
+                            <path d="M-8 0 L-6-3 L-4 0 L-6 3 Z" fill="#4CAF50"/>
+                            <circle cx="0" cy="0" r="3" fill="#81C784"/>
+                        </g>
+                    </svg>
+                </div>
+                <h1>Welcome to MindBloom</h1>
+                <p>Your safe space for mental wellness</p>
+            </div>
+
+            <form id="loginForm" class="auth-form">
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" name="username" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+
+                <button type="submit" class="auth-btn">Sign In</button>
+
+                <div class="auth-footer">
+                    <p>New to MindBloom? <a href="{{ url_for('register') }}">Create an account</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/auth.js') }}"></script>
+</body>
+</html>

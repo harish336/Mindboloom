@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MindBloom - Register</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/auth.css') }}">
+</head>
+<body>
+    <div class="auth-container">
+        <div class="auth-card">
+            <div class="auth-header">
+                <div class="logo">
+                    <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+                        <circle cx="24" cy="24" r="24" fill="#E8F5E8"/>
+                        <g transform="translate(24,24)">
+                            <path d="M0-8 L3-6 L0-4 L-3-6 Z" fill="#4CAF50"/>
+                            <path d="M8 0 L6 3 L4 0 L6-3 Z" fill="#4CAF50"/>
+                            <path d="M0 8 L-3 6 L0 4 L3 6 Z" fill="#4CAF50"/>
+                            <path d="M-8 0 L-6-3 L-4 0 L-6 3 Z" fill="#4CAF50"/>
+                            <circle cx="0" cy="0" r="3" fill="#81C784"/>
+                        </g>
+                    </svg>
+                </div>
+                <h1>Join MindBloom</h1>
+                <p>Start your journey to better mental health</p>
+            </div>
+
+            <form id="registerForm" class="auth-form">
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" name="username" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" required>
+                    <div class="password-hint">
+                        Password should be at least 8 characters long
+                    </div>
+                </div>
+
+                <button type="submit" class="auth-btn">Create Account</button>
+
+                <div class="auth-footer">
+                    <p>Already have an account? <a href="{{ url_for('login') }}">Sign in</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/auth.js') }}"></script>
+</body>
+</html>
