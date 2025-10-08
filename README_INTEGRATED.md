@@ -33,7 +33,7 @@ pip install Flask Flask-SQLAlchemy Flask-Login Werkzeug google-generativeai text
 export GEMINI_API_KEY="your_actual_api_key_here"
 
 # Or on Windows:
-set GEMINI_API_KEY=AIzaSyDE2Qi805m_m5M5XZVbvbLQ-bGlpnwM-TY
+set GEMINI_API_KEY="Your_api"
 ```
 
 ### 3. Run the Application
